@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
             <span className="mb-4 inline-block bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-              AgniArena
+              Play1
             </span>
             <p className="mb-4 max-w-md text-zinc-400">
               Open-source, real-time sports platform for live match scoring,
@@ -16,11 +16,11 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://github.com/rupeshbisen/agniarena-frontend"
+                href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-400 transition-colors hover:text-white"
-                aria-label="Visit AgniArena on GitHub"
+                aria-label="Visit Play1 on GitHub"
               >
                 <svg
                   className="h-6 w-6"
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2 text-zinc-400">
               <li>
                 <Link
-                  href="https://github.com/rupeshbisen/agniarena-frontend"
+                  href="https://github.com/rupeshbisen/play1-frontend"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
@@ -73,7 +73,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://github.com/rupeshbisen/agniarena-frontend/issues"
+                  href="https://github.com/rupeshbisen/play1-frontend/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://github.com/rupeshbisen/agniarena-frontend/discussions"
+                  href="https://github.com/rupeshbisen/play1-frontend/discussions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-zinc-800 pt-8 text-center text-zinc-400">
           <p>
-            &copy; {new Date().getFullYear()} AgniArena. Open-source under MIT
+            &copy; {new Date().getFullYear()} Play1. Open-source under MIT
             License.
           </p>
         </div>

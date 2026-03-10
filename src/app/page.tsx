@@ -9,7 +9,7 @@ export default function Home() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <span className="bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-                AgniArena
+                Play1
               </span>
             </div>
             <div className="hidden space-x-8 md:flex">
@@ -26,7 +26,7 @@ export default function Home() {
                 About
               </a>
               <a
-                href="https://github.com/rupeshbisen/agniarena-frontend"
+                href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-300 transition-colors hover:text-white"
@@ -75,7 +75,7 @@ export default function Home() {
                 Start Free Trial
               </Link>
               <a
-                href="https://github.com/rupeshbisen/agniarena-frontend"
+                href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full rounded-lg border border-zinc-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-zinc-600 hover:bg-zinc-900 sm:w-auto"
@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Decorative gradient */}
         <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl">
-          <div className="h-150 w-200 rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20"></div>
+          <div className="h-[150px] w-[200px] rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20"></div>
         </div>
       </section>
 
@@ -264,14 +264,14 @@ export default function Home() {
                 Built for Scalability & Low Latency
               </h2>
               <p className="mb-6 text-lg text-zinc-400">
-                AgniArena is designed from the ground up to handle everything
+                Play1 is designed from the ground up to handle everything
                 from grassroots tournaments to professional leagues. Our
                 architecture ensures your matches, streams, and auctions run
                 smoothly regardless of scale.
               </p>
               <p className="mb-8 text-lg text-zinc-400">
                 Powered by modern web technologies like Next.js, React, and
-                Socket.io, AgniArena delivers real-time updates with minimal
+                Socket.io, Play1 delivers real-time updates with minimal
                 latency. Your fans stay engaged with instant score updates and
                 live interactions.
               </p>
@@ -400,7 +400,7 @@ export default function Home() {
                   Create Free Account
                 </Link>
                 <a
-                  href="https://github.com/rupeshbisen/agniarena-frontend"
+                  href="https://github.com/rupeshbisen/play1-frontend"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full rounded-lg border border-zinc-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-zinc-600 hover:bg-zinc-900 sm:w-auto"

@@ -1,6 +1,6 @@
-# Contributing to AgniArena Frontend
+# Contributing to Play1 Frontend
 
-Thank you for your interest in contributing to AgniArena Frontend! We welcome contributions from the community and are grateful for your support in making this project better.
+Thank you for your interest in contributing to Play1 Frontend! We welcome contributions from the community and are grateful for your support in making this project better.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDU
 
 ## Ways to Contribute
 
-There are many ways you can contribute to AgniArena Frontend:
+There are many ways you can contribute to Play1 Frontend:
 
 - **Report bugs** - Help us identify and fix issues
 - **Suggest features** - Share ideas for new functionality
@@ -49,14 +49,14 @@ There are many ways you can contribute to AgniArena Frontend:
 2. **Clone your fork**
    
    ```bash
-   git clone https://github.com/YOUR_USERNAME/agniarena-frontend.git
-   cd agniarena-frontend
+   git clone https://github.com/YOUR_USERNAME/play1-frontend.git
+   cd play1-frontend
    ```
 
 3. **Add upstream remote**
    
    ```bash
-   git remote add upstream https://github.com/rupeshbisen/agniarena-frontend.git
+   git remote add upstream https://github.com/rupeshbisen/play1-frontend.git
    ```
 
 4. **Install dependencies**
@@ -292,8 +292,8 @@ When requesting features, please include:
 
 If you need help or have questions:
 
-- 💬 [GitHub Discussions](https://github.com/rupeshbisen/agniarena-frontend/discussions) - Ask questions and discuss ideas
-- 🐛 [GitHub Issues](https://github.com/rupeshbisen/agniarena-frontend/issues) - Report bugs or request features
+- 💬 [GitHub Discussions](https://github.com/rupeshbisen/play1-frontend/discussions) - Ask questions and discuss ideas
+- 🐛 [GitHub Issues](https://github.com/rupeshbisen/play1-frontend/issues) - Report bugs or request features
 - 📧 Email: rupesh.bisen2022@gmail.com - For private inquiries
 
 ## Recognition
@@ -305,8 +305,8 @@ Contributors will be recognized in our:
 
 ## License
 
-By contributing to AgniArena Frontend, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+By contributing to play1 Frontend, you agree that your contributions will be licensed under the [MIT License](LICENSE).
 
 ---
 
-Thank you for contributing to AgniArena Frontend! 🚀
+Thank you for contributing to play1 Frontend! 🚀
