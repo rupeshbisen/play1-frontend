@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Register | Agni Arena',
-  description: 'Create your Agni Arena account.',
+  title: 'Register | Play1 - Real-Time Sports Platform',
+  description: 'Create your Play1 account.',
 };
 
 const backdropStyle = {

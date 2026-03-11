@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Decorative gradient */}
         <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl">
-          <div className="h-[150px] w-[200px] rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20"></div>
+          <div className="h-40 w-52 rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20"></div>
         </div>
       </section>
 
@@ -264,10 +264,10 @@ export default function Home() {
                 Built for Scalability & Low Latency
               </h2>
               <p className="mb-6 text-lg text-zinc-400">
-                Play1 is designed from the ground up to handle everything
-                from grassroots tournaments to professional leagues. Our
-                architecture ensures your matches, streams, and auctions run
-                smoothly regardless of scale.
+                Play1 is designed from the ground up to handle everything from
+                grassroots tournaments to professional leagues. Our architecture
+                ensures your matches, streams, and auctions run smoothly
+                regardless of scale.
               </p>
               <p className="mb-8 text-lg text-zinc-400">
                 Powered by modern web technologies like Next.js, React, and
