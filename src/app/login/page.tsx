@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Login | Agni Arena',
-  description: 'Access your Agni Arena account.',
+  title: 'Login | Play1 - Real-Time Sports Platform',
+  description: 'Access your Play1 account.',
 };
 
 const backdropStyle = {
@@ -34,7 +34,7 @@ export default function LoginPage() {
 
           <div className="space-y-3">
             <h1 className="text-4xl font-semibold leading-[1.05] text-white sm:text-5xl">
-              Sign in to Agni Arena
+              Sign in to Play1
             </h1>
             <p className="max-w-2xl text-base text-slate-200/80 sm:text-lg">
               Join your team, review arena updates, and keep your sessions in
