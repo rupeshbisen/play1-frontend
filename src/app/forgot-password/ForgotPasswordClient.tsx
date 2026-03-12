@@ -194,7 +194,7 @@ export default function ForgotPasswordClient() {
 
                 <button
                   type="submit"
-                  disabled
+                  disabled={!email}
                   className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-cyan-400 to-amber-300 px-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-900/30 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
                   title="Backend integration pending"
                 >

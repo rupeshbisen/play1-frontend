@@ -305,8 +305,8 @@ Contributors will be recognized in our:
 
 ## License
 
-By contributing to play1 Frontend, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+By contributing to Play1 Frontend, you agree that your contributions will be licensed under the [MIT License](LICENSE).
 
 ---
 
-Thank you for contributing to play1 Frontend! 🚀
+Thank you for contributing to Play1 Frontend! 🚀
