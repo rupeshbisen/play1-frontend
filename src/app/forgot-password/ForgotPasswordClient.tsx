@@ -205,27 +205,33 @@ export default function ForgotPasswordClient() {
             {step === 'otp' && (
               <>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-100/90">
-                    Enter 6-digit OTP
-                  </label>
-                  <div className="flex gap-2 justify-between">
-                    {otp.map((digit, index) => (
-                      <input
-                        key={index}
-                        ref={(el) => {
-                          otpRefs.current[index] = el;
-                        }}
-                        type="text"
-                        inputMode="numeric"
-                        maxLength={1}
-                        value={digit}
-                        onChange={(e) => handleOtpChange(index, e.target.value)}
-                        onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                        className="w-full h-14 text-center text-2xl font-semibold rounded-xl border border-white/10 bg-white/5 text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
-                        required
-                      />
-                    ))}
-                  </div>
+                  <fieldset>
+                    <legend className="text-sm font-medium text-slate-100/90">
+                      Enter 6-digit OTP
+                    </legend>
+                    <div className="flex gap-2 justify-between mt-2">
+                      {otp.map((digit, index) => (
+                        <input
+                          key={index}
+                          ref={(el) => {
+                            otpRefs.current[index] = el;
+                          }}
+                          type="text"
+                          inputMode="numeric"
+                          maxLength={1}
+                          value={digit}
+                          onChange={(e) =>
+                            handleOtpChange(index, e.target.value)
+                          }
+                          onKeyDown={(e) => handleOtpKeyDown(index, e)}
+                          aria-label={`OTP digit ${index + 1} of 6`}
+                          autoComplete={index === 0 ? 'one-time-code' : 'off'}
+                          className="w-full h-14 text-center text-2xl font-semibold rounded-xl border border-white/10 bg-white/5 text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+                          required
+                        />
+                      ))}
+                    </div>
+                  </fieldset>
                 </div>
 
                 <button
