@@ -109,13 +109,13 @@ Relates to #
 
 <!-- Verify that you've completed all required steps -->
 
-- [ ] I have read the [CONTRIBUTING](https://github.com/rupeshbisen/agniarena-frontend/blob/main/CONTRIBUTING.md) guidelines
+- [ ] I have read the [CONTRIBUTING](https://github.com/rupeshbisen/play1-frontend/blob/main/CONTRIBUTING.md) guidelines
 - [ ] I have followed the commit message format (conventional commits)
 - [ ] I have updated the documentation (if necessary)
 - [ ] I have added tests that prove my fix is effective or that my feature works (if applicable)
 - [ ] I have rebased my branch on the latest main/dev branch
 - [ ] All CI checks pass (formatting, type-check, linting, build)
-- [ ] I agree to follow the [Code of Conduct](https://github.com/rupeshbisen/agniarena-frontend/blob/main/CODE_OF_CONDUCT.md)
+- [ ] I agree to follow the [Code of Conduct](https://github.com/rupeshbisen/play1-frontend/blob/main/CODE_OF_CONDUCT.md)
 
 ## Reviewer Notes
 
@@ -123,4 +123,4 @@ Relates to #
 
 ---
 
-**Thank you for contributing to AgniArena Frontend! 🚀**
+**Thank you for contributing to Play1 Frontend! 🚀**

@@ -1,6 +1,6 @@
 ---
 name: ✨ Feature Request
-about: Suggest a new feature or enhancement for AgniArena Frontend
+about: Suggest a new feature or enhancement for Play1 Frontend
 title: '[Feature]: '
 labels: 'enhancement'
 assignees: ''
@@ -57,4 +57,4 @@ assignees: ''
 
 **Code of Conduct**
 
-- [ ] I agree to follow this project's [Code of Conduct](https://github.com/rupeshbisen/agniarena-frontend/blob/main/CODE_OF_CONDUCT.md)
+- [ ] I agree to follow this project's [Code of Conduct](https://github.com/rupeshbisen/play1-frontend/blob/main/CODE_OF_CONDUCT.md)

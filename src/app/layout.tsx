@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import Footer from '@/src/components/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -17,8 +18,6 @@ export const metadata: Metadata = {
   description:
     'Open-source real-time sports platform for live match scoring, live video streaming, and player auctions. From grassroots tournaments to professional leagues.',
 };
-
-import Footer from '@/src/components/Footer';
 
 export default function RootLayout({
   children,

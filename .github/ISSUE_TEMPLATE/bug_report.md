@@ -1,6 +1,6 @@
 ---
 name: 🐛 Bug Report
-about: Report a bug or unexpected behavior in AgniArena Frontend
+about: Report a bug or unexpected behavior in Play1 Frontend
 title: '[Bug]: '
 labels: 'bug'
 assignees: ''
@@ -62,4 +62,4 @@ Paste console errors here
 
 **Code of Conduct**
 
-- [ ] I agree to follow this project's [Code of Conduct](https://github.com/rupeshbisen/agniarena-frontend/blob/main/CODE_OF_CONDUCT.md)
+- [ ] I agree to follow this project's [Code of Conduct](https://github.com/rupeshbisen/play1-frontend/blob/main/CODE_OF_CONDUCT.md)
