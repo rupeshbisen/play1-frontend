@@ -1,7 +1,28 @@
 {
   "name": "play1-frontend",
   "version": "0.1.1",
+  "description": "Play1 Frontend - A modern Next.js application",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rupeshbisen/play1-frontend.git"
+  },
+  "homepage": "https://github.com/rupeshbisen/play1-frontend",
+  "bugs": {
+    "url": "https://github.com/rupeshbisen/play1-frontend/issues"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "frontend"
+  ],
+  "author": "Rupesh Bisen <rupesh.bisen2022@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.8.1",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,14 +33,21 @@
     "format:check": "prettier --check .",
     "type-check": "tsc --noEmit",
     "quality": "npm run format:check && npm run type-check && npm run lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "semantic-release"
   },
   "dependencies": {
-    "next": "16.1.3",
+    "next": "^16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.4.4",
+    "@commitlint/config-conventional": "^20.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/release-notes-generator": "^14.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -29,6 +57,7 @@
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "prettier": "^3.8.0",
+    "semantic-release": "^25.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
