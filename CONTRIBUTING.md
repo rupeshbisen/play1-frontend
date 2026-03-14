@@ -157,7 +157,7 @@ npm run build
 
 ## Commit Guidelines
 
-We follow conventional commit messages for clarity and consistency:
+We follow conventional commit messages for clarity and consistency. Commit messages are automatically validated using commitlint.
 
 ### Commit Message Format
 
@@ -180,6 +180,11 @@ We follow conventional commit messages for clarity and consistency:
 - `test`: Adding or updating tests
 - `chore`: Maintenance tasks, dependency updates
 - `ci`: CI/CD configuration changes
+- `revert`: Revert a previous commit
+
+### Scopes
+
+Scopes are optional but recommended for clarity. When used, they should be in lowercase.
 
 ### Examples
 
@@ -191,16 +196,19 @@ fix(video): Resolve HLS stream playback issue on mobile
 docs(readme): Update installation instructions
 
 chore(deps): Update Next.js to version 16.1.3
+
+revert: fix(auth): remove broken authentication check
 ```
 
 ### Tips
 
 - Use the imperative mood ("add" not "added" or "adds")
-- Keep the subject line under 72 characters
-- Capitalize the subject line
+- Keep the subject line under 100 characters
+- Use sentence case for the subject (not title case)
 - Do not end the subject line with a period
 - Separate subject from body with a blank line
 - Use the body to explain what and why, not how
+- Scopes are optional but help categorize changes
 
 ## Pull Request Process
 
