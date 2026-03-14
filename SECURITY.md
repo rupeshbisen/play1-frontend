@@ -50,7 +50,7 @@ We use the following tools and practices:
 ## Contact
 
 - **Security Team**: [rupesh.bisen2022@gmail.com](mailto:rupesh.bisen2022@gmail.com)
-- **Maintainers**: [@project-maintainers](https://github.com/rupeshbisen)
+- **Maintainers**: [@rupeshbisen](https://github.com/rupeshbisen)
 
 ---
 
