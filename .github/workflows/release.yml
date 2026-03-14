@@ -17,11 +17,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # Use a PAT (RELEASE_TOKEN) so semantic-release can push the
-          # changelog commit back to the protected main branch.
-          # Create a fine-grained PAT with "Contents: Read & Write" and
-          # "Pull requests: Read & Write" scopes, then add it as a
-          # repository secret named RELEASE_TOKEN.
           token: ${{ secrets.RELEASE_TOKEN }}
 
       - name: Setup Node.js
@@ -41,11 +36,7 @@ jobs:
 
       - name: Release
         env:
-          # GITHUB_TOKEN is used by @semantic-release/github to create
-          # the GitHub release and tag.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # GIT_AUTHOR / GIT_COMMITTER are used by @semantic-release/git
-          # when committing the updated CHANGELOG.md back to main.
           GIT_AUTHOR_NAME: 'github-actions[bot]'
           GIT_AUTHOR_EMAIL: 'github-actions[bot]@users.noreply.github.com'
           GIT_COMMITTER_NAME: 'github-actions[bot]'
