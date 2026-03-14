@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-950 to-black text-white">
+    <div className="min-h-screen bg-linear-to-b from-zinc-900 via-zinc-950 to-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 z-50 w-full border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-                AgniArena
+              <span className="bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
+                Play1
               </span>
             </div>
             <div className="hidden space-x-8 md:flex">
@@ -26,7 +26,7 @@ export default function Home() {
                 About
               </a>
               <a
-                href="https://github.com/rupeshbisen/agniarena-frontend"
+                href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-300 transition-colors hover:text-white"
@@ -43,7 +43,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/register"
-                className="rounded-lg bg-gradient-to-r from-orange-500 to-red-600 px-4 py-2 text-sm font-medium text-white transition-all hover:from-orange-600 hover:to-red-700"
+                className="rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-4 py-2 text-sm font-medium text-white transition-all hover:from-orange-600 hover:to-red-700"
               >
                 Get Started
               </Link>
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="mb-6 text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-orange-400 via-red-500 to-orange-600 bg-clip-text text-transparent">
                 Real-Time Sports
               </span>
               <br />
@@ -70,12 +70,12 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/register"
-                className="w-full rounded-lg bg-gradient-to-r from-orange-500 to-red-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-orange-600 hover:to-red-700 sm:w-auto"
+                className="w-full rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-orange-600 hover:to-red-700 sm:w-auto"
               >
                 Start Free Trial
               </Link>
               <a
-                href="https://github.com/rupeshbisen/agniarena-frontend"
+                href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full rounded-lg border border-zinc-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-zinc-600 hover:bg-zinc-900 sm:w-auto"
@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Decorative gradient */}
         <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl">
-          <div className="h-[600px] w-[800px] rounded-full bg-gradient-to-r from-orange-500/20 to-red-600/20"></div>
+          <div className="h-40 w-52 rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20"></div>
         </div>
       </section>
 
@@ -264,21 +264,21 @@ export default function Home() {
                 Built for Scalability & Low Latency
               </h2>
               <p className="mb-6 text-lg text-zinc-400">
-                AgniArena is designed from the ground up to handle everything
-                from grassroots tournaments to professional leagues. Our
-                architecture ensures your matches, streams, and auctions run
-                smoothly regardless of scale.
+                Play1 is designed from the ground up to handle everything from
+                grassroots tournaments to professional leagues. Our architecture
+                ensures your matches, streams, and auctions run smoothly
+                regardless of scale.
               </p>
               <p className="mb-8 text-lg text-zinc-400">
                 Powered by modern web technologies like Next.js, React, and
-                Socket.io, AgniArena delivers real-time updates with minimal
+                Socket.io, Play1 delivers real-time updates with minimal
                 latency. Your fans stay engaged with instant score updates and
                 live interactions.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <svg
-                    className="mr-3 h-6 w-6 flex-shrink-0 text-orange-500"
+                    className="mr-3 h-6 w-6 shrink-0 text-orange-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -299,7 +299,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start">
                   <svg
-                    className="mr-3 h-6 w-6 flex-shrink-0 text-orange-500"
+                    className="mr-3 h-6 w-6 shrink-0 text-orange-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -320,7 +320,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start">
                   <svg
-                    className="mr-3 h-6 w-6 flex-shrink-0 text-orange-500"
+                    className="mr-3 h-6 w-6 shrink-0 text-orange-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -343,7 +343,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div className="relative">
-                <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 opacity-75 blur-2xl"></div>
+                <div className="absolute -inset-1 rounded-lg bg-linear-to-r from-orange-500 to-red-600 opacity-75 blur-2xl"></div>
                 <div className="relative rounded-lg border border-zinc-800 bg-zinc-900 p-8">
                   <h3 className="mb-4 text-2xl font-bold">Tech Stack</h3>
                   <div className="space-y-3">
@@ -382,7 +382,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-r from-orange-500/10 to-red-600/10 p-12 text-center">
+          <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-linear-to-r from-orange-500/10 to-red-600/10 p-12 text-center">
             <div className="relative z-10">
               <h2 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
                 Ready to Get Started?
@@ -395,12 +395,12 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/register"
-                  className="w-full rounded-lg bg-gradient-to-r from-orange-500 to-red-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-orange-600 hover:to-red-700 sm:w-auto"
+                  className="w-full rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-orange-600 hover:to-red-700 sm:w-auto"
                 >
                   Create Free Account
                 </Link>
                 <a
-                  href="https://github.com/rupeshbisen/agniarena-frontend"
+                  href="https://github.com/rupeshbisen/play1-frontend"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full rounded-lg border border-zinc-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-zinc-600 hover:bg-zinc-900 sm:w-auto"
@@ -412,108 +412,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-zinc-800 px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-4">
-            <div className="md:col-span-2">
-              <span className="mb-4 inline-block bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-                AgniArena
-              </span>
-              <p className="mb-4 max-w-md text-zinc-400">
-                Open-source, real-time sports platform for live match scoring,
-                streaming, and player auctions. Built for transparency and
-                scalability.
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/rupeshbisen/agniarena-frontend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-400 transition-colors hover:text-white"
-                  aria-label="Visit AgniArena on GitHub"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    focusable={false}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="mb-4 font-semibold text-white">Product</h4>
-              <ul className="space-y-2 text-zinc-400">
-                <li>
-                  <a href="#features" className="hover:text-white">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" className="hover:text-white">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <Link href="/register" className="hover:text-white">
-                    Sign Up
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="mb-4 font-semibold text-white">Resources</h4>
-              <ul className="space-y-2 text-zinc-400">
-                <li>
-                  <a
-                    href="https://github.com/rupeshbisen/agniarena-frontend"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/rupeshbisen/agniarena-frontend/issues"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    Report Bug
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/rupeshbisen/agniarena-frontend/discussions"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    Community
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-zinc-800 pt-8 text-center text-zinc-400">
-            <p>
-              &copy; {new Date().getFullYear()} AgniArena. Open-source under MIT
-              License.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

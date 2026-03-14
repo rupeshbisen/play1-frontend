@@ -1,6 +1,6 @@
-# AgniArena
+# Play1
 
-AgniArena is an **open-source, real-time sports platform** that enables live match scoring, live video streaming, and player auctions for sports tournaments.
+Play1 is an **open-source, real-time sports platform** that enables live match scoring, live video streaming, and player auctions for sports tournaments.
 
 Built for scalability, low latency, and transparency -- from grassroots tournaments to professional leagues.
 
@@ -8,9 +8,9 @@ Website: Coming Soon
  Docs: Coming Soon
 Core Concepts: Real-time | WebSockets | Scalable | OSS
 
-# AgniArena Web Frontend
+# Play1 Web Frontend
 
-AgniArena Web Frontend is the **public-facing web application** for viewing live match scores, live streams, and real-time player auctions.
+Play1 Web Frontend is the **public-facing web application** for viewing live match scores, live streams, and real-time player auctions.
 
 ## Features
 
@@ -39,8 +39,8 @@ AgniArena Web Frontend is the **public-facing web application** for viewing live
 ### Installation
 
 ```bash
-git clone https://github.com/rupeshbisen/agniarena-frontend.git
-cd agniarena-frontend
+git clone https://github.com/rupeshbisen/play1-frontend.git
+cd play1-frontend
 npm install
 ```
 
@@ -80,6 +80,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-- [Report a Bug](https://github.com/rupeshbisen/agniarena-frontend/issues)
-- [Request a Feature](https://github.com/rupeshbisen/agniarena-frontend/issues)
-- [Discussions](https://github.com/rupeshbisen/agniarena-frontend/discussions)
+- [Report a Bug](https://github.com/rupeshbisen/play1-frontend/issues)
+- [Request a Feature](https://github.com/rupeshbisen/play1-frontend/issues)
+- [Discussions](https://github.com/rupeshbisen/play1-frontend/discussions)

@@ -13,10 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'AgniArena - Real-Time Sports Platform',
+  title: 'Play1 - Real-Time Sports Platform',
   description:
     'Open-source real-time sports platform for live match scoring, live video streaming, and player auctions. From grassroots tournaments to professional leagues.',
 };
+
+import Footer from '@/src/components/Footer';
 
 export default function RootLayout({
   children,
@@ -26,9 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        {children}
+        <main className="grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
