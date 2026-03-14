@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'AgniArena - Real-Time Sports Platform',
+  title: 'Play1 - Real-Time Sports Platform',
   description:
     'Open-source real-time sports platform for live match scoring, live video streaming, and player auctions. From grassroots tournaments to professional leagues.',
 };

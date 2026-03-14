@@ -2,100 +2,103 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden border-t border-white/10 bg-slate-950 text-slate-100">
-      {/* Background Glows */}
-      <div
-        className="absolute inset-x-0 top-0 -z-10 h-24 bg-cyan-400/10 blur-3xl"
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+    <footer className="border-t border-zinc-800 bg-zinc-950 text-zinc-400 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-8 md:grid-cols-4">
+          <div className="md:col-span-2">
+            <span className="mb-4 inline-block bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
+              Play1
+            </span>
+            <p className="mb-4 max-w-md text-zinc-400">
+              Open-source, real-time sports platform for live match scoring,
+              streaming, and player auctions. Built for transparency and
+              scalability.
+            </p>
+            <div className="flex space-x-4">
+              <Link
+                href="https://github.com/rupeshbisen/play1-frontend"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 transition-colors hover:text-white"
+                aria-label="Visit Play1 on GitHub"
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable={false}
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              Stay connected with AgniArena.
-            </h2>
-            <p className="mt-4 text-lg text-slate-400">
-              Get the latest updates, event alerts, and tournament insights
-              delivered straight to your inbox.
-            </p>
+            <h4 className="mb-4 font-semibold text-white">Product</h4>
+            <ul className="space-y-2 text-zinc-400">
+              <li>
+                <Link href="/#features" className="hover:text-white">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about" className="hover:text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/register" className="hover:text-white">
+                  Sign Up
+                </Link>
+              </li>
+            </ul>
           </div>
-          <form className="flex w-full max-w-md flex-col gap-4 sm:flex-row lg:max-w-none lg:justify-end">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email-address"
-              name="email"
-              type="email"
-              required
-              placeholder="Enter your email"
-              className="w-full min-w-0 flex-auto rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-base text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10 sm:max-w-xs"
-            />
-            <button
-              type="submit"
-              disabled
-              className="inline-flex h-11 items-center justify-center rounded-xl bg-linear-to-r from-cyan-400 to-amber-300 px-6 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-900/30 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              Subscribe
-            </button>
-          </form>
+          <div>
+            <h4 className="mb-4 font-semibold text-white">Resources</h4>
+            <ul className="space-y-2 text-zinc-400">
+              <li>
+                <Link
+                  href="https://github.com/rupeshbisen/play1-frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  GitHub
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/rupeshbisen/play1-frontend/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Report Bug
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/rupeshbisen/play1-frontend/discussions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Community
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div className="mt-12 border-t border-white/5 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex justify-center space-x-6 md:order-2">
-            <Link
-              href="#"
-              className="text-slate-400 transition-colors duration-300 hover:text-cyan-300"
-            >
-              <span className="sr-only">X</span>
-              <svg
-                className="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-              </svg>
-            </Link>
-            <Link
-              href="#"
-              className="text-slate-400 transition-colors duration-300 hover:text-cyan-300"
-            >
-              <span className="sr-only">GitHub</span>
-              <svg
-                className="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-            <Link
-              href="#"
-              className="text-slate-400 transition-colors duration-300 hover:text-cyan-300"
-            >
-              <span className="sr-only">Discord</span>
-              <svg
-                className="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.947 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.946 2.419-2.157 2.419z" />
-              </svg>
-            </Link>
-          </div>
-          <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-sm leading-5 text-slate-400">
-              &copy; {new Date().getFullYear()} AgniArena. All rights reserved.
-            </p>
-          </div>
+        <div className="mt-12 border-t border-zinc-800 pt-8 text-center text-zinc-400">
+          <p>
+            &copy; {new Date().getFullYear()} Play1. Open-source under MIT
+            License.
+          </p>
         </div>
       </div>
     </footer>

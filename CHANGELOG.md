@@ -49,5 +49,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ESLint configuration
 - Basic application structure with app router
 
-[Unreleased]: https://github.com/rupeshbisen/agniarena-frontend/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/rupeshbisen/agniarena-frontend/releases/tag/v0.1.0
+[Unreleased]: https://github.com/rupeshbisen/play1-frontend/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/rupeshbisen/play1-frontend/releases/tag/v0.1.0
