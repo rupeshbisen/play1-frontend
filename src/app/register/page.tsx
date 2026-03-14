@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Login | Play1 - Real-Time Sports Platform',
-  description: 'Access your Play1 account.',
+  title: 'Register | Play1 - Real-Time Sports Platform',
+  description: 'Create your Play1 account.',
 };
 
 const backdropStyle = {
@@ -11,7 +11,7 @@ const backdropStyle = {
     'radial-gradient(1200px at 20% 15%, rgba(56, 189, 248, 0.16), transparent 50%), radial-gradient(900px at 80% 0%, rgba(251, 191, 36, 0.12), transparent 45%), linear-gradient(120deg, rgba(15, 23, 42, 0.9), rgba(8, 47, 73, 0.75))',
 };
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
@@ -24,21 +24,22 @@ export default function LoginPage() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 lg:flex-row lg:items-center lg:gap-16 lg:py-20">
         <section className="flex-1 space-y-7">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-50/70 ring-1 ring-white/10">
-            <span>Welcome back</span>
+            <span>Join the arena</span>
             <span
               className="h-1 w-1 rounded-full bg-amber-300/80"
               aria-hidden="true"
             />
-            <span>Secure access</span>
+            <span>Get started</span>
           </div>
 
           <div className="space-y-3">
             <h1 className="text-4xl font-semibold leading-[1.05] text-white sm:text-5xl">
-              Sign in to Play1
+              Create your account
             </h1>
             <p className="max-w-2xl text-base text-slate-200/80 sm:text-lg">
-              Join your team, review arena updates, and keep your sessions in
-              sync. Everything you need sits behind a secure, focused sign-in.
+              Join the arena and experience real-time sports scoring, live
+              streaming, and player auctions. Create your account to get
+              started.
             </p>
           </div>
 
@@ -49,11 +50,11 @@ export default function LoginPage() {
                 aria-hidden="true"
               />
               <h3 className="text-base font-semibold text-white">
-                Session continuity
+                Real-time updates
               </h3>
               <p className="mt-1 text-sm text-slate-200/75">
-                Resume where you left off with synced layouts and saved
-                preferences on every device.
+                Get instant access to live match scores, streaming, and auction
+                updates as they happen.
               </p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4 shadow-sm">
@@ -62,11 +63,11 @@ export default function LoginPage() {
                 aria-hidden="true"
               />
               <h3 className="text-base font-semibold text-white">
-                Strong security
+                Community access
               </h3>
               <p className="mt-1 text-sm text-slate-200/75">
-                Modern encryption, device checks, and session alerts help keep
-                your arena secure.
+                Join tournaments, participate in auctions, and connect with the
+                sports community.
               </p>
             </div>
           </div>
@@ -81,10 +82,10 @@ export default function LoginPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-slate-200/60">
-                  Sign in
+                  Sign up
                 </p>
                 <h2 className="text-xl font-semibold text-white">
-                  Welcome back
+                  Create account
                 </h2>
               </div>
               <Link
@@ -94,6 +95,21 @@ export default function LoginPage() {
                 Back to site
               </Link>
             </div>
+
+            <label
+              htmlFor="name"
+              className="space-y-2 text-sm font-medium text-slate-100/90"
+            >
+              <span>Full Name</span>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                required
+                placeholder="John Doe"
+                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+              />
+            </label>
 
             <label
               htmlFor="email"
@@ -125,22 +141,45 @@ export default function LoginPage() {
               />
             </label>
 
-            <div className="flex items-center justify-between text-sm text-slate-200/80">
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  name="remember"
-                  className="h-4 w-4 rounded border-white/30 bg-white/10 text-cyan-300 focus:ring-0"
-                />
-                <span>Remember me</span>
-              </label>
-              <Link
-                href="/forgot-password"
-                className="text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
-              >
-                Forgot access?
-              </Link>
-            </div>
+            <label
+              htmlFor="confirmPassword"
+              className="space-y-2 text-sm font-medium text-slate-100/90"
+            >
+              <span>Confirm Password</span>
+              <input
+                id="confirmPassword"
+                type="password"
+                name="confirmPassword"
+                required
+                placeholder="********"
+                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+              />
+            </label>
+
+            <label className="flex items-start gap-2 text-sm text-slate-200/80">
+              <input
+                type="checkbox"
+                name="terms"
+                required
+                className="mt-0.5 h-4 w-4 rounded border-white/30 bg-white/10 text-cyan-300 focus:ring-0"
+              />
+              <span>
+                I agree to the{' '}
+                <Link
+                  href="/"
+                  className="font-semibold text-cyan-200 transition hover:text-cyan-100"
+                >
+                  Terms of Service
+                </Link>{' '}
+                and{' '}
+                <Link
+                  href="/"
+                  className="font-semibold text-cyan-200 transition hover:text-cyan-100"
+                >
+                  Privacy Policy
+                </Link>
+              </span>
+            </label>
 
             <button
               type="submit"
@@ -148,17 +187,17 @@ export default function LoginPage() {
               className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-cyan-400 to-amber-300 px-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-900/30 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
               title="Backend integration pending"
             >
-              Continue
+              Create Account
             </button>
 
             <p className="text-center text-sm text-slate-200/80">
-              Need an account?
+              Already have an account?
               <span className="mx-1">|</span>
               <Link
-                href="/register"
+                href="/login"
                 className="font-semibold text-cyan-200 transition hover:text-cyan-100"
               >
-                Sign up
+                Sign in
               </Link>
             </p>
           </form>
