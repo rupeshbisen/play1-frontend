@@ -93,7 +93,10 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="px-4 py-20 sm:px-6 lg:px-8">
+      <section
+        id="features"
+        className="scroll-mt-20 px-4 py-20 sm:px-6 lg:px-8"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
@@ -256,7 +259,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
+      <section id="about" className="scroll-mt-20 px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -346,6 +349,9 @@ export default function Home() {
                 <div className="absolute -inset-1 rounded-lg bg-linear-to-r from-orange-500 to-red-600 opacity-75 blur-2xl"></div>
                 <div className="relative rounded-lg border border-zinc-800 bg-zinc-900 p-8">
                   <h3 className="mb-4 text-2xl font-bold">Tech Stack</h3>
+                  <p className="mb-4 text-sm text-zinc-400">
+                    Current &amp; planned
+                  </p>
                   <div className="space-y-3">
                     <div className="flex items-center text-zinc-300">
                       <div className="mr-3 h-2 w-2 rounded-full bg-orange-500"></div>
@@ -405,7 +411,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-full rounded-lg border border-zinc-700 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-zinc-600 hover:bg-zinc-900 sm:w-auto"
                 >
-                  Explore Documentation
+                  View on GitHub
                 </a>
               </div>
             </div>
