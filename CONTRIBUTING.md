@@ -35,7 +35,7 @@ There are many ways you can contribute to Play1 Frontend:
 
 ### Prerequisites
 
-- Node.js 18 or higher
+- Node.js ^22.14.0 or >=24.10.0
 - npm, pnpm, or yarn package manager
 - Git for version control
 - A GitHub account
@@ -189,13 +189,13 @@ Scopes are optional but recommended for clarity. When used, they should be in lo
 ### Examples
 
 ```bash
-feat(scoring): Add real-time score updates via WebSocket
+feat(scoring): add real-time score updates via WebSocket
 
-fix(video): Resolve HLS stream playback issue on mobile
+fix(video): resolve HLS stream playback issue on mobile
 
-docs(readme): Update installation instructions
+docs(readme): update installation instructions
 
-chore(deps): Update Next.js to version 16.1.3
+chore(deps): update Next.js to version 16.1.3
 
 revert: fix(auth): remove broken authentication check
 ```
@@ -204,7 +204,7 @@ revert: fix(auth): remove broken authentication check
 
 - Use the imperative mood ("add" not "added" or "adds")
 - Keep the subject line under 100 characters
-- Use sentence case for the subject (not title case)
+- Use lowercase for the subject (not title case)
 - Do not end the subject line with a period
 - Separate subject from body with a blank line
 - Use the body to explain what and why, not how

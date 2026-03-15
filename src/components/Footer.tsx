@@ -55,6 +55,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tournaments" className="hover:text-white">
+                  Tournaments
+                </Link>
+              </li>
+              <li>
                 <Link href="/register" className="hover:text-white">
                   Sign Up
                 </Link>
