@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: 'Play1 - Real-Time Sports Platform',
   description:
     'Open-source real-time sports platform for live match scoring, live video streaming, and player auctions. From grassroots tournaments to professional leagues.',
+  icons: {
+    icon: '/Logo_play1.png',
+    shortcut: '/Logo_play1.png',
+    apple: '/Logo_play1.png',
+  },
 };
 
 export default function RootLayout({

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BrandLogo from '@/src/components/BrandLogo';
 
 export default function Home() {
   return (
@@ -7,11 +8,11 @@ export default function Home() {
       <nav className="fixed top-0 z-50 w-full border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <span className="bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-                Play1
-              </span>
-            </div>
+            <BrandLogo
+              imageClassName="h-10 w-10"
+              textClassName="text-2xl"
+              priority
+            />
             <div className="hidden space-x-8 md:flex">
               <a
                 href="#features"
@@ -43,7 +44,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/register"
-                className="rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-4 py-2 text-sm font-medium text-white transition-all hover:from-orange-600 hover:to-red-700"
+                className="rounded-lg bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange px-4 py-2 text-sm font-medium text-white transition-all hover:brightness-110"
               >
                 Get Started
               </Link>
@@ -57,7 +58,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="mb-6 text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="bg-linear-to-r from-orange-400 via-red-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange bg-clip-text text-transparent">
                 Real-Time Sports
               </span>
               <br />
@@ -70,7 +71,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/register"
-                className="w-full rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-orange-600 hover:to-red-700 sm:w-auto"
+                className="w-full rounded-lg bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange px-8 py-4 text-lg font-semibold text-white transition-all hover:brightness-110 sm:w-auto"
               >
                 Start Free Trial
               </Link>
@@ -88,7 +89,7 @@ export default function Home() {
 
         {/* Decorative gradient */}
         <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl">
-          <div className="h-40 w-52 rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20"></div>
+          <div className="h-40 w-52 rounded-full bg-linear-to-r from-electric-blue/20 to-vibrant-purple/20"></div>
         </div>
       </section>
 
@@ -111,9 +112,9 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Feature 1 */}
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all hover:border-zinc-700">
-              <div className="mb-4 inline-block rounded-lg bg-orange-500/10 p-3">
+              <div className="mb-4 inline-block rounded-lg bg-electric-blue/10 p-3">
                 <svg
-                  className="h-8 w-8 text-orange-500"
+                  className="h-8 w-8 text-electric-blue"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -137,9 +138,9 @@ export default function Home() {
 
             {/* Feature 2 */}
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all hover:border-zinc-700">
-              <div className="mb-4 inline-block rounded-lg bg-red-500/10 p-3">
+              <div className="mb-4 inline-block rounded-lg bg-vibrant-purple/10 p-3">
                 <svg
-                  className="h-8 w-8 text-red-500"
+                  className="h-8 w-8 text-vibrant-purple"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -161,9 +162,9 @@ export default function Home() {
 
             {/* Feature 3 */}
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all hover:border-zinc-700">
-              <div className="mb-4 inline-block rounded-lg bg-orange-500/10 p-3">
+              <div className="mb-4 inline-block rounded-lg bg-electric-blue/10 p-3">
                 <svg
-                  className="h-8 w-8 text-orange-500"
+                  className="h-8 w-8 text-electric-blue"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -185,9 +186,9 @@ export default function Home() {
 
             {/* Feature 4 */}
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all hover:border-zinc-700">
-              <div className="mb-4 inline-block rounded-lg bg-red-500/10 p-3">
+              <div className="mb-4 inline-block rounded-lg bg-vibrant-purple/10 p-3">
                 <svg
-                  className="h-8 w-8 text-red-500"
+                  className="h-8 w-8 text-vibrant-purple"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -209,9 +210,9 @@ export default function Home() {
 
             {/* Feature 5 */}
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all hover:border-zinc-700">
-              <div className="mb-4 inline-block rounded-lg bg-orange-500/10 p-3">
+              <div className="mb-4 inline-block rounded-lg bg-electric-blue/10 p-3">
                 <svg
-                  className="h-8 w-8 text-orange-500"
+                  className="h-8 w-8 text-electric-blue"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -233,9 +234,9 @@ export default function Home() {
 
             {/* Feature 6 */}
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-8 transition-all hover:border-zinc-700">
-              <div className="mb-4 inline-block rounded-lg bg-red-500/10 p-3">
+              <div className="mb-4 inline-block rounded-lg bg-vibrant-purple/10 p-3">
                 <svg
-                  className="h-8 w-8 text-red-500"
+                  className="h-8 w-8 text-vibrant-purple"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -281,7 +282,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <svg
-                    className="mr-3 h-6 w-6 shrink-0 text-orange-500"
+                    className="mr-3 h-6 w-6 shrink-0 text-electric-blue"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -302,7 +303,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start">
                   <svg
-                    className="mr-3 h-6 w-6 shrink-0 text-orange-500"
+                    className="mr-3 h-6 w-6 shrink-0 text-electric-blue"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -323,7 +324,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start">
                   <svg
-                    className="mr-3 h-6 w-6 shrink-0 text-orange-500"
+                    className="mr-3 h-6 w-6 shrink-0 text-electric-blue"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -346,7 +347,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div className="relative">
-                <div className="absolute -inset-1 rounded-lg bg-linear-to-r from-orange-500 to-red-600 opacity-75 blur-2xl"></div>
+                <div className="absolute -inset-1 rounded-lg bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange opacity-75 blur-2xl"></div>
                 <div className="relative rounded-lg border border-zinc-800 bg-zinc-900 p-8">
                   <h3 className="mb-4 text-2xl font-bold">Tech Stack</h3>
                   <p className="mb-4 text-sm text-zinc-400">
@@ -354,27 +355,27 @@ export default function Home() {
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center text-zinc-300">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-orange-500"></div>
+                      <div className="mr-3 h-2 w-2 rounded-full bg-bright-orange"></div>
                       Next.js 14 with App Router
                     </div>
                     <div className="flex items-center text-zinc-300">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-red-500"></div>
+                      <div className="mr-3 h-2 w-2 rounded-full bg-vibrant-purple"></div>
                       React 19 & TypeScript
                     </div>
                     <div className="flex items-center text-zinc-300">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-orange-500"></div>
+                      <div className="mr-3 h-2 w-2 rounded-full bg-bright-orange"></div>
                       Tailwind CSS 4
                     </div>
                     <div className="flex items-center text-zinc-300">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-red-500"></div>
+                      <div className="mr-3 h-2 w-2 rounded-full bg-vibrant-purple"></div>
                       Redux Toolkit
                     </div>
                     <div className="flex items-center text-zinc-300">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-orange-500"></div>
+                      <div className="mr-3 h-2 w-2 rounded-full bg-bright-orange"></div>
                       Socket.io Client
                     </div>
                     <div className="flex items-center text-zinc-300">
-                      <div className="mr-3 h-2 w-2 rounded-full bg-red-500"></div>
+                      <div className="mr-3 h-2 w-2 rounded-full bg-vibrant-purple"></div>
                       HLS.js / Video.js
                     </div>
                   </div>
@@ -388,7 +389,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-linear-to-r from-orange-500/10 to-red-600/10 p-12 text-center">
+          <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-linear-to-r from-electric-blue/10 via-deep-indigo/10 to-bright-orange/10 p-12 text-center">
             <div className="relative z-10">
               <h2 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
                 Ready to Get Started?
@@ -401,7 +402,7 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/register"
-                  className="w-full rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-orange-600 hover:to-red-700 sm:w-auto"
+                  className="w-full rounded-lg bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange px-8 py-4 text-lg font-semibold text-white transition-all hover:brightness-110 sm:w-auto"
                 >
                   Create Free Account
                 </Link>
