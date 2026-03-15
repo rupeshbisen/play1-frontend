@@ -3,18 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* Play1 logo brand colors */
-  --brand-from: #f97316; /* orange-500 – gradient start */
-  --brand-to: #dc2626; /* red-600   – gradient end   */
+  --electric-blue: #00aeef;
+  --electric-blue-rgb: 0, 174, 239;
+  --vibrant-purple: #662d91;
+  --vibrant-purple-rgb: 102, 45, 145;
+  --bright-orange: #f7941d;
+  --bright-orange-rgb: 247, 148, 29;
+  --deep-indigo: #2e3192;
+  --deep-indigo-rgb: 46, 49, 146;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-from: var(--brand-from);
-  --color-brand-to: var(--brand-to);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-electric-blue: var(--electric-blue);
+  --color-vibrant-purple: var(--vibrant-purple);
+  --color-bright-orange: var(--bright-orange);
+  --color-deep-indigo: var(--deep-indigo);
 }
 
 @media (prefers-color-scheme: dark) {

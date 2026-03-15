@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BrandLogo from '@/src/components/BrandLogo';
 
 export default function Footer() {
   return (
@@ -6,9 +7,11 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
-            <span className="mb-4 inline-block bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-              Play1
-            </span>
+            <BrandLogo
+              className="mb-4"
+              imageClassName="h-10 w-10"
+              textClassName="text-2xl"
+            />
             <p className="mb-4 max-w-md text-zinc-400">
               Open-source, real-time sports platform for live match scoring,
               streaming, and player auctions. Built for transparency and
