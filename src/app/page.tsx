@@ -25,6 +25,12 @@ export default function Home() {
               >
                 About
               </a>
+              <Link
+                href="/tournaments"
+                className="text-zinc-300 transition-colors hover:text-white"
+              >
+                Tournaments
+              </Link>
               <a
                 href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
