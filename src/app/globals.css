@@ -3,11 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Play1 logo brand colors */
+  --brand-from: #f97316; /* orange-500 – gradient start */
+  --brand-to: #dc2626; /* red-600   – gradient end   */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-from: var(--brand-from);
+  --color-brand-to: var(--brand-to);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

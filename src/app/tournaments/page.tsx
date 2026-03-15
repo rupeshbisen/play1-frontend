@@ -127,11 +127,11 @@ const statusConfig: Record<
 > = {
   live: {
     label: 'Live',
-    className: 'bg-red-500/20 text-red-400 ring-1 ring-red-500/30',
+    className: 'bg-brand-to/20 text-brand-to ring-1 ring-brand-to/30',
   },
   upcoming: {
     label: 'Upcoming',
-    className: 'bg-orange-500/20 text-orange-400 ring-1 ring-orange-500/30',
+    className: 'bg-brand-from/20 text-brand-from ring-1 ring-brand-from/30',
   },
   completed: {
     label: 'Completed',
@@ -167,7 +167,7 @@ export default function TournamentsPage() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-8">
               <Link href="/">
-                <span className="bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
+                <span className="bg-linear-to-r from-brand-from to-brand-to bg-clip-text text-2xl font-bold text-transparent">
                   Play1
                 </span>
               </Link>
@@ -204,7 +204,7 @@ export default function TournamentsPage() {
               </Link>
               <Link
                 href="/register"
-                className="rounded-lg bg-linear-to-r from-orange-500 to-red-600 px-4 py-2 text-sm font-medium text-white transition-all hover:from-orange-600 hover:to-red-700"
+                className="rounded-lg bg-linear-to-r from-brand-from to-brand-to px-4 py-2 text-sm font-medium text-white transition-all hover:opacity-90"
               >
                 Get Started
               </Link>
@@ -217,8 +217,8 @@ export default function TournamentsPage() {
       <section className="relative px-4 pb-12 pt-28 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-orange-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-from/20 bg-brand-from/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand-from">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-from" />
               Tournament Hub
             </div>
             <h1 className="mb-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
@@ -233,14 +233,14 @@ export default function TournamentsPage() {
           {/* Stats row */}
           <div className="flex flex-wrap gap-6 text-sm">
             <div className="flex items-center gap-2">
-              <span className="flex h-2.5 w-2.5 rounded-full bg-red-500 shadow-[0_0_6px_2px_rgba(239,68,68,0.5)]" />
+              <span className="flex h-2.5 w-2.5 rounded-full bg-brand-to shadow-[0_0_6px_2px_rgba(220,38,38,0.5)]" />
               <span className="font-semibold text-white">
                 {liveTournaments.length}
               </span>
               <span className="text-zinc-400">Live now</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-orange-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-brand-from" />
               <span className="font-semibold text-white">
                 {upcomingTournaments.length}
               </span>
@@ -258,7 +258,7 @@ export default function TournamentsPage() {
 
         {/* Decorative gradient */}
         <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl">
-          <div className="h-40 w-52 rounded-full bg-linear-to-r from-orange-500/20 to-red-600/20" />
+          <div className="h-40 w-52 rounded-full bg-linear-to-r from-brand-from/20 to-brand-to/20" />
         </div>
       </section>
 
@@ -267,7 +267,7 @@ export default function TournamentsPage() {
         <section className="px-4 pb-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="mb-6 flex items-center gap-3">
-              <span className="flex h-2.5 w-2.5 rounded-full bg-red-500 shadow-[0_0_6px_2px_rgba(239,68,68,0.5)]" />
+              <span className="flex h-2.5 w-2.5 rounded-full bg-brand-to shadow-[0_0_6px_2px_rgba(220,38,38,0.5)]" />
               <h2 className="text-xl font-bold">Live Tournaments</h2>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -284,7 +284,7 @@ export default function TournamentsPage() {
         <section className="px-4 pb-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-orange-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-brand-from" />
               <h2 className="text-xl font-bold">Upcoming Tournaments</h2>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -325,7 +325,7 @@ function TournamentCard({ tournament }: { tournament: Tournament }) {
     <article
       className={`group relative flex flex-col rounded-2xl border bg-zinc-900/50 p-6 transition-all hover:bg-zinc-900/80 ${
         isLive
-          ? 'border-red-500/30 hover:border-red-500/50'
+          ? 'border-brand-to/30 hover:border-brand-to/50'
           : 'border-zinc-800 hover:border-zinc-700'
       }`}
     >
@@ -334,13 +334,13 @@ function TournamentCard({ tournament }: { tournament: Tournament }) {
         <div className="flex items-center gap-3">
           <div
             className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-2xl ${
-              isLive ? 'bg-red-500/10' : 'bg-orange-500/10'
+              isLive ? 'bg-brand-to/10' : 'bg-brand-from/10'
             }`}
           >
             {icon}
           </div>
           <div>
-            <h3 className="font-semibold leading-snug text-white group-hover:text-orange-100">
+            <h3 className="font-semibold leading-snug text-white group-hover:text-brand-from/90">
               {tournament.name}
             </h3>
             <p className="mt-0.5 text-sm text-zinc-400">{tournament.sport}</p>
@@ -350,7 +350,7 @@ function TournamentCard({ tournament }: { tournament: Tournament }) {
           className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold ${status.className}`}
         >
           {isLive && (
-            <span className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-red-500 align-middle" />
+            <span className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-to align-middle" />
           )}
           {status.label}
         </span>
@@ -400,9 +400,9 @@ function TournamentCard({ tournament }: { tournament: Tournament }) {
           title="Backend integration pending"
           className={`w-full cursor-not-allowed rounded-xl py-2.5 text-sm font-semibold transition-all disabled:opacity-60 ${
             isLive
-              ? 'bg-linear-to-r from-red-500 to-orange-500 text-white'
+              ? 'bg-linear-to-r from-brand-to to-brand-from text-white'
               : tournament.status === 'upcoming'
-                ? 'border border-orange-500/40 text-orange-400 hover:bg-orange-500/10'
+                ? 'border border-brand-from/40 text-brand-from hover:bg-brand-from/10'
                 : 'border border-zinc-700 text-zinc-400'
           }`}
         >
