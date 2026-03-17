@@ -128,6 +128,7 @@ export default function Home() {
 
   return (
     <>
+      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: structuredData is a server-side constant with no user input, serialised by JSON.stringify */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
