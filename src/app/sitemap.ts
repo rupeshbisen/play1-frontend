@@ -10,11 +10,8 @@ const publicRoutes = [
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   return publicRoutes.map((route) => ({
     url: `${siteConfig.url}${route.path}`,
-    lastModified: now,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
