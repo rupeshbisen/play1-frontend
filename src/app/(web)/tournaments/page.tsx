@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/src/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Tournaments | Play1 - Real-Time Sports Platform',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Tournaments',
   description:
     'Browse all tournaments on Play1. Find live, upcoming, and completed sports tournaments with real-time scoring and streaming.',
-};
+  path: '/tournaments',
+  keywords: [
+    'sports tournaments',
+    'live tournaments',
+    'tournament registration',
+  ],
+});
 
 type Tournament = {
   id: number;
