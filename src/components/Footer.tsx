@@ -1,104 +1,160 @@
 import Link from 'next/link';
+import BrandLogo from '@/src/components/BrandLogo';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-zinc-950 text-zinc-400 px-4 py-12 sm:px-6 lg:px-8">
+    <footer
+      id="community"
+      className="border-t border-slate-200 bg-slate-50 px-4 py-14 text-slate-600 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-5">
           <div className="md:col-span-2">
-            <span className="mb-4 inline-block bg-linear-to-r from-orange-500 to-red-600 bg-clip-text text-2xl font-bold text-transparent">
-              Play1
-            </span>
-            <p className="mb-4 max-w-md text-zinc-400">
-              Open-source, real-time sports platform for live match scoring,
-              streaming, and player auctions. Built for transparency and
-              scalability.
+            <BrandLogo
+              className="mb-4"
+              imageClassName="h-12 w-auto"
+              showText
+              textClassName="text-2xl font-black tracking-tight"
+            />
+            <p className="mb-6 max-w-md text-base text-slate-500">
+              Revolutionizing local sports through technology and real-time data
+              tracking. Build your legacy, one match at a time.
             </p>
-            <div className="flex space-x-4">
+          </div>
+          <div>
+            <h4 className="mb-4 text-sm font-bold text-slate-900">Platform</h4>
+            <ul className="space-y-3 text-sm text-slate-500">
+              <li>
+                <Link href="/tournaments" className="hover:text-vibrant-purple">
+                  Find Tournaments
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#leaderboard"
+                  className="hover:text-vibrant-purple"
+                >
+                  Player Ranking
+                </Link>
+              </li>
+              <li>
+                <Link href="/#results" className="hover:text-vibrant-purple">
+                  Live Scoreboards
+                </Link>
+              </li>
+              <li>
+                <Link href="/#community" className="hover:text-vibrant-purple">
+                  For Organizers
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="mb-4 text-sm font-bold text-slate-900">Company</h4>
+            <ul className="space-y-3 text-sm text-slate-500">
+              <li>
+                <Link href="#" className="hover:text-vibrant-purple">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-vibrant-purple">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-vibrant-purple">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-vibrant-purple">
+                  Contact Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="mb-4 text-sm font-bold text-slate-900">Follow Us</h4>
+            <div className="flex space-x-3">
               <Link
                 href="https://github.com/rupeshbisen/play1-frontend"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 transition-colors hover:text-white"
-                aria-label="Visit Play1 on GitHub"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
+                aria-label="Follow Play1 on Facebook"
               >
                 <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
+                  className="h-4 w-4"
                   viewBox="0 0 24 24"
+                  fill="currentColor"
                   aria-hidden="true"
-                  focusable={false}
+                >
+                  <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v5h3v-5h2.4l.6-3H13V9c0-.6.4-1 1-1z" />
+                </svg>
+              </Link>
+              <Link
+                href="https://github.com/rupeshbisen/play1-frontend/discussions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
+                aria-label="Follow Play1 on Twitter"
+              >
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  aria-hidden="true"
                 >
                   <path
-                    fillRule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                    clipRule="evenodd"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M22 6.2c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.2-.8.5-1.7.9-2.6 1.1A4 4 0 0012 8.4c0 .3 0 .6.1.9-3.3-.2-6.2-1.8-8.2-4.2-.4.6-.6 1.3-.6 2.1 0 1.4.7 2.7 1.9 3.4-.7 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1 .1-.2 0-.5 0-.7-.1.5 1.6 2 2.8 3.8 2.8A8 8 0 013 19.4a11.3 11.3 0 006.1 1.8c7.3 0 11.3-6.1 11.3-11.3v-.5c.8-.6 1.4-1.2 1.9-2"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="/"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
+                aria-label="Follow Play1 on Instagram"
+              >
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="4" y="4" width="16" height="16" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="3.5" />
+                  <circle
+                    cx="17"
+                    cy="7"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
                   />
                 </svg>
               </Link>
             </div>
           </div>
-          <div>
-            <h4 className="mb-4 font-semibold text-white">Product</h4>
-            <ul className="space-y-2 text-zinc-400">
-              <li>
-                <Link href="/#features" className="hover:text-white">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about" className="hover:text-white">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/register" className="hover:text-white">
-                  Sign Up
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 font-semibold text-white">Resources</h4>
-            <ul className="space-y-2 text-zinc-400">
-              <li>
-                <Link
-                  href="https://github.com/rupeshbisen/play1-frontend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  GitHub
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://github.com/rupeshbisen/play1-frontend/issues"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Report Bug
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://github.com/rupeshbisen/play1-frontend/discussions"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Community
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
-        <div className="mt-12 border-t border-zinc-800 pt-8 text-center text-zinc-400">
+        <div className="mt-12 flex flex-col justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} Play1. Open-source under MIT
-            License.
+            &copy; {new Date().getFullYear()} play1 sports tech. All rights
+            reserved.
           </p>
+          <div className="flex gap-6">
+            <Link href="#" className="hover:text-vibrant-purple">
+              Terms of Service
+            </Link>
+            <Link href="#" className="hover:text-vibrant-purple">
+              Cookie Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
