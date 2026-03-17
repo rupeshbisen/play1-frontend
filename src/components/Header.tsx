@@ -31,7 +31,10 @@ export default function Header() {
           priority
         />
 
-        <nav className="hidden items-center space-x-8 md:flex">
+        <nav
+          className="hidden items-center space-x-8 md:flex"
+          aria-label="Primary"
+        >
           <Link
             href="/tournaments"
             className="text-sm font-semibold text-slate-600 transition-colors hover:text-vibrant-purple"

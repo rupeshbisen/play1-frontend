@@ -1,53 +1,20 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { buildPageMetadata, siteConfig } from '@/src/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Play1 | Score Your Local Matches Like a Pro',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Score Your Local Matches Like a Pro',
   description:
     'The ultimate platform for local athletes to track stats, manage tournaments, and climb the ranks with real-time match updates.',
+  path: '/',
   keywords: [
-    'play1',
     'local sports',
-    'live tournaments',
     'match tracking',
     'sports leaderboard',
-    'player rankings',
     'tournament platform',
-    'sports community',
   ],
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'play1 - Score Your Local Matches Like a Pro',
-    description:
-      'Track stats, follow live tournaments, and grow your local sports presence with play1.',
-    url: '/',
-    siteName: 'play1',
-    images: [
-      {
-        url: '/Logo_play1.png',
-        width: 1200,
-        height: 1200,
-        alt: 'play1 sports platform logo',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'play1 - Score Your Local Matches Like a Pro',
-    description:
-      'Track stats, follow live tournaments, and grow your local sports presence with play1.',
-    images: ['/Logo_play1.png'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+});
 
 const tournaments = [
   {
@@ -146,8 +113,25 @@ const results = [
 ];
 
 export default function Home() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteConfig.url}/tournaments`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section
         className="border-b border-slate-100 pb-24 pt-20"
         style={{
