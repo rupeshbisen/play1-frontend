@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import BrandLogo from '@/src/components/BrandLogo';
+import { buildPageMetadata } from '@/src/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Login | Play1 - Real-Time Sports Platform',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Login',
   description: 'Access your Play1 account.',
-};
+  path: '/login',
+  keywords: ['play1 login', 'sports account login'],
+});
 
 const backdropStyle = {
   background:
