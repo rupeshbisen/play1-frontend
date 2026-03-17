@@ -21,7 +21,7 @@ export default function NotFound() {
           Error 404 • Out of bounds
         </div>
 
-        <div className="relative mb-6 sm:mb-12">
+        <div className="relative mb-6 sm:mb-12" aria-hidden="true">
           <div className="absolute inset-x-0 top-1/2 h-40 -translate-y-1/2 rounded-full bg-linear-to-r from-electric-blue/12 via-vibrant-purple/10 to-bright-orange/12 blur-3xl sm:h-52" />
 
           <div className="relative flex items-center justify-center gap-4 sm:gap-8">
@@ -59,7 +59,7 @@ export default function NotFound() {
 
           <p className="text-lg font-medium text-slate-600">
             The page you&apos;re looking for doesn&apos;t exist or has been
-            moved to another server. Let&apos;s get you back in the game.
+            moved to a different address. Let&apos;s get you back in the game.
           </p>
         </div>
 
@@ -90,7 +90,9 @@ export default function NotFound() {
 
           <div className="flex flex-wrap justify-center gap-3">
             <Link
-              href="/#community"
+              href="https://github.com/rupeshbisen/play1-frontend/discussions"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition-all hover:border-bright-orange hover:bg-bright-orange/10 hover:text-bright-orange"
             >
               <LifeBuoy className="h-4 w-4" />
@@ -114,7 +116,9 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/#community"
+              href="https://github.com/rupeshbisen/play1-frontend/discussions"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition-all hover:border-deep-indigo hover:bg-deep-indigo/10 hover:text-deep-indigo"
             >
               <Users className="h-4 w-4" />
