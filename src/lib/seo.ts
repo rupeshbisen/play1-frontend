@@ -21,6 +21,7 @@ const defaultKeywords = [
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   applicationName: siteConfig.name,
+  manifest: '/site.webmanifest',
   title: {
     default: siteConfig.title,
     template: '%s | Play1',
@@ -31,9 +32,13 @@ export const defaultMetadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: siteConfig.ogImage,
-    shortcut: siteConfig.ogImage,
-    apple: siteConfig.ogImage,
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: siteConfig.title,

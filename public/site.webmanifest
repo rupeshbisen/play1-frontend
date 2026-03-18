@@ -1,0 +1,26 @@
+{
+  "name": "Play1 - Real-Time Sports Platform",
+  "short_name": "Play1",
+  "description": "Open-source real-time sports platform for live match scoring, live video streaming, and player auctions.",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#662d91",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "categories": ["sports", "productivity"],
+  "lang": "en"
+}
