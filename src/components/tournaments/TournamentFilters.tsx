@@ -64,6 +64,7 @@ export default function TournamentFilters({
             type="text"
             placeholder="Search by tournament name or sport..."
             className="w-full rounded-xl border border-zinc-200 bg-zinc-100 py-3 pl-11 pr-4 text-sm text-zinc-700 placeholder:text-zinc-500"
+            aria-label="Search tournaments"
           />
         </div>
 

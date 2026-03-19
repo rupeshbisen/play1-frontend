@@ -71,7 +71,7 @@ export default function ImageInfoCard({
             return (
               <p
                 key={`${item.label}-${Icon.displayName ?? Icon.name}`}
-                className="inline-flex items-center gap-2"
+                className="flex items-center gap-2"
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
                 {item.label}
