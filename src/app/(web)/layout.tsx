@@ -1,5 +1,5 @@
-import Footer from '@/src/components/Footer';
-import Header from '@/src/components/Header';
+import Footer from '@/src/components/layout/Footer';
+import Header from '@/src/components/layout/Header';
 import { siteConfig } from '@/src/lib/seo';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';

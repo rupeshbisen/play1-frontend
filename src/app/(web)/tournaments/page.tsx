@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
+import { ArrowDown, CalendarDays, MapPin, Trophy } from 'lucide-react';
 import { buildPageMetadata } from '@/src/lib/seo';
+import TournamentCard from '@/src/components/tournaments/TournamentCard';
+import TournamentFilters from '@/src/components/tournaments/TournamentFilters';
+import type { Tournament } from '@/src/components/tournaments/TournamentCard';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Tournaments',
@@ -13,16 +17,6 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-type Tournament = {
-  id: number;
-  name: string;
-  category: 'Basketball' | 'Esports' | 'Tennis' | 'Soccer' | 'Golf';
-  date: string;
-  location: string;
-  players: string;
-  prize: string;
-};
-
 const tournaments: Tournament[] = [
   {
     id: 1,
@@ -32,6 +26,8 @@ const tournaments: Tournament[] = [
     location: 'Central Park, NY',
     players: '32/64',
     prize: '$5,000',
+    imageUrl:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDdjGKzAMXxz1wmA9owV4u8YC2ef22-1adnL1XPnpuD35BQJfH3MmwVJs3iAf6YVAYk9U59rrvbYPz24XHz19C1-X0sMWTXCdzisWyC0QcUscBxl1WS9Gy6AfvX3_1bQhg0HC3IWrv5UM8zTNCQnPl2cTFZxvHaXkxd_qSyF26VH22Yd43UMPGPHCsy9sFjrUM9LdK0Ayg1e3wTgTvraAnp7uFC3WrIybPcwawfKokiGUEN1FxnaLc7jmgHrRKM5awE4m_JPLeQneHU',
   },
   {
     id: 2,
@@ -41,6 +37,8 @@ const tournaments: Tournament[] = [
     location: 'Online Global',
     players: '128/128',
     prize: '$12,000',
+    imageUrl:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuARfeD4I3CX3EU2FF4NzAEzZi7dPEnMEBExIw1DiMc9kQ2_pqh86cYBW7UFhpLxxWRmNMLB1dLm45Y25TyptD2Xaopmt7Kr29rkowfh4Bfj707yTngcaDM73FZYfnsLnMLeLKi9I7uYx_u1RAOmazGnL7Ti3BidzSfMUBKl6xU8TQAbWDHnbgzLBCDLcBvVLgmwushPKxqTEKis5rU3uEugOvFJ5AzM3nDwJif-ZeY2wMEGRNm5tAjxtesuqagbULQFefrAS4vIFhWj',
   },
   {
     id: 3,
@@ -50,6 +48,8 @@ const tournaments: Tournament[] = [
     location: 'San Diego, CA',
     players: '12/16',
     prize: '$2,500',
+    imageUrl:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCFQo23oUpHwS10aIfwA7gsu2gy5zT55mjZK2DoodDP-LV959-5TU_Z4hXUYBlwolgV5H2YHef3aqA9wis0qDT2xIOY5GLh2WXYDpSRygGWhWMVbQKYSTRLt6hRrG-JoKgmawodvnNDkmpuvNVRKvjQXRbNs1xX944xePjJyPVctQTUenrXNoHKX224s5LnKi0GSSmG98Pdext5yVJWZQe7TLIb47AiY6nh38GHXxEbMlkNiAiZcwXiofqL8jEw-i-FhSvnC5_MqkiF',
   },
   {
     id: 4,
@@ -59,6 +59,8 @@ const tournaments: Tournament[] = [
     location: 'Austin, TX',
     players: '4/16',
     prize: '$7,500',
+    imageUrl:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCHQ8rSQ3c5SRl7B68OAT-M2oehq3YG2xT-sD534t5wI6lPqCdkrm_iqdtUNhyezxFzrsdETMDPzflYwuHtyiqh7_9evC-TNFDIKTO67cxjKMuMo0MvX9oxbPDn4OEZQ1D4UHenGQ1uaMthIBgAniNnRQ6j0A6fhmhq2xQ-6kdnqtVVBFkRUkFnlLjr0wRHdo5Sl1vkGolsMiuz1HqIkMhzPyIuXGHSASKcO8Xi-1807zZ8XACn277TozBSUj9OuDgZqIwBBKwhFWto',
   },
   {
     id: 5,
@@ -68,6 +70,8 @@ const tournaments: Tournament[] = [
     location: 'Scottsdale, AZ',
     players: '28/40',
     prize: '$15,000',
+    imageUrl:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuD0qxgNJ6gFKGnnTRcwxF6b1I6ZxD5FmhrxFvR1y_kEUHTGCEuCr6TEzXO3Wyz-SF8clR9ZBp5Cq7Pg6W5WxjOO1TyJlYjqmkZvBcXxvVrTXxs4gkRrWF9gt0mmrJOWGOjUOcm3jQXeZ6tTC9o_jjdAsKmuK6O1Kw_Q88dxiv2XMRt-4QDF96JHLXQlUuELlf1pT9d1jBhytBfts6g62iGUzMcpBiXtuRR3a7io_6wwmlkxIAuPgUIIJztqf3x6yfQ5AQ29Om76cdDt',
   },
   {
     id: 6,
@@ -77,24 +81,35 @@ const tournaments: Tournament[] = [
     location: 'Online - NA',
     players: '64/64',
     prize: '$3,000',
+    imageUrl:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCawUDmdRUPYCS2NAGBMAhqNnWnhsyQXor__l0W1Rir-1emQVeVxra37f5csdGH5OayBEsFOAugaiWL0SLI-gJdwaH8-JqsrVXYbG473ikjJa2GvkzycuILw5J5XbV8D7WUqd3UpGjdLYqpb91t3X_iV4DKkBitT5qL-PLSTYSos-T9KFgwmAd8zBuhDp9iBW3Zy1Jw31eYp9U8BHVjAGjGnNbLQ-NvzThKFvuCExzu66uZCAaFjo06XEuljaw42GDolBUhlvmt3ayf',
   },
 ];
 
-const categoryStyles: Record<Tournament['category'], string> = {
-  Basketball: 'bg-vibrant-purple text-white',
-  Esports: 'bg-electric-blue text-white',
-  Tennis: 'bg-bright-orange text-white',
-  Soccer: 'bg-vibrant-purple text-white',
-  Golf: 'bg-bright-orange text-white',
-};
+const sports = [
+  { value: 'all', label: 'All Sports' },
+  { value: 'basketball', label: 'Basketball' },
+  { value: 'esports', label: 'Esports' },
+  { value: 'tennis', label: 'Tennis' },
+  { value: 'soccer', label: 'Soccer' },
+  { value: 'golf', label: 'Golf' },
+];
 
-const coverStyles: Record<Tournament['category'], string> = {
-  Basketball: 'bg-linear-to-r from-zinc-500 via-zinc-200 to-zinc-400',
-  Esports: 'bg-linear-to-r from-zinc-700 via-zinc-400 to-zinc-600',
-  Tennis: 'bg-linear-to-r from-slate-900 via-zinc-300 to-zinc-800',
-  Soccer: 'bg-linear-to-r from-amber-900 via-zinc-100 to-amber-800',
-  Golf: 'bg-linear-to-r from-zinc-200 via-slate-900 to-zinc-200',
-};
+const cities = [
+  { value: 'all', label: 'Any City' },
+  { value: 'new-york', label: 'New York' },
+  { value: 'san-diego', label: 'San Diego' },
+  { value: 'austin', label: 'Austin' },
+  { value: 'scottsdale', label: 'Scottsdale' },
+  { value: 'online', label: 'Online' },
+];
+
+const dateRanges = [
+  { value: 'month', label: 'This Month' },
+  { value: 'week', label: 'This Week' },
+  { value: 'next-month', label: 'Next Month' },
+  { value: 'all', label: 'Any Time' },
+];
 
 export default function TournamentsPage() {
   return (
@@ -110,9 +125,24 @@ export default function TournamentsPage() {
                 Summer Masters Invitational 2024
               </h1>
               <div className="mt-5 flex flex-wrap items-center gap-5 text-sm font-semibold text-zinc-200">
-                <span>$50,000 Pool</span>
-                <span>July 15-20</span>
-                <span>Miami, FL</span>
+                <span className="inline-flex items-center gap-2">
+                  <Trophy
+                    className="h-4 w-4 text-bright-orange"
+                    aria-hidden="true"
+                  />
+                  $50,000 Pool
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <CalendarDays
+                    className="h-4 w-4 text-electric-blue"
+                    aria-hidden="true"
+                  />
+                  July 15-20
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-white" aria-hidden="true" />
+                  Miami, FL
+                </span>
               </div>
             </div>
 
@@ -125,32 +155,11 @@ export default function TournamentsPage() {
           </div>
         </section>
 
-        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm">
-          <div className="flex flex-wrap items-center gap-3">
-            <div className="min-w-64 grow rounded-xl bg-zinc-100 px-4 py-3 text-sm text-zinc-500">
-              Search by tournament name or sport...
-            </div>
-            <FilterPill label="All Sports" />
-            <FilterPill label="Any City" />
-            <FilterPill label="This Month" />
-            <button
-              type="button"
-              aria-label="Filters"
-              className="rounded-xl bg-bright-orange p-3 text-white shadow"
-            >
-              <svg
-                className="h-4 w-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path d="M4 7h16M7 12h10M10 17h4" />
-              </svg>
-            </button>
-          </div>
-        </section>
+        <TournamentFilters
+          sports={sports}
+          cities={cities}
+          dateRanges={dateRanges}
+        />
 
         <section className="mt-10">
           <div className="mb-5 flex items-center justify-between">
@@ -161,82 +170,24 @@ export default function TournamentsPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {tournaments.map((tournament) => (
-              <TournamentCard key={tournament.id} tournament={tournament} />
-            ))}
+            {tournaments.map((tournament) => {
+              return (
+                <TournamentCard key={tournament.id} tournament={tournament} />
+              );
+            })}
           </div>
         </section>
 
         <div className="mt-10 text-center">
           <button
             type="button"
-            className="rounded-xl border border-zinc-200 bg-white px-7 py-3 text-sm font-semibold text-zinc-700"
+            className="inline-flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-7 py-3 text-sm font-semibold text-zinc-700"
           >
             Load More Tournaments
+            <ArrowDown className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
       </div>
     </div>
-  );
-}
-
-function TournamentCard({ tournament }: { tournament: Tournament }) {
-  return (
-    <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-      <div className={`relative h-44 p-4 ${coverStyles[tournament.category]}`}>
-        <span
-          className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide ${categoryStyles[tournament.category]}`}
-        >
-          {tournament.category}
-        </span>
-        <span className="absolute right-4 top-4 rounded bg-zinc-900/80 px-2 py-1 text-xs font-semibold text-white">
-          {tournament.players}
-        </span>
-      </div>
-
-      <div className="p-5">
-        <div className="mb-4 flex items-start justify-between gap-4">
-          <h3 className="text-2xl font-bold leading-tight text-zinc-900">
-            {tournament.name}
-          </h3>
-          <span className="text-lg font-bold text-bright-orange">
-            {tournament.prize}
-          </span>
-        </div>
-
-        <div className="mb-5 space-y-2 text-sm text-zinc-500">
-          <p>{tournament.date}</p>
-          <p>{tournament.location}</p>
-        </div>
-
-        <button
-          type="button"
-          className="w-full rounded-xl bg-zinc-100 py-3 text-base font-semibold text-zinc-800"
-        >
-          View Details
-        </button>
-      </div>
-    </article>
-  );
-}
-
-function FilterPill({ label }: { label: string }) {
-  return (
-    <button
-      type="button"
-      className="inline-flex items-center rounded-xl bg-zinc-100 px-4 py-3 text-sm font-semibold text-zinc-600"
-    >
-      {label}
-      <svg
-        className="ml-2 h-4 w-4"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        aria-hidden="true"
-      >
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </button>
   );
 }
