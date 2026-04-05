@@ -1,9 +1,12 @@
-# [1.1.0](https://github.com/rupeshbisen/play1-frontend/compare/v1.0.0...v1.1.0) (2026-03-14)
+# [0.1.1](https://github.com/rupeshbisen/play1-frontend/compare/v0.1.0...v0.1.1) (2026-03-14)
 
 
 ### Bug Fixes
 
 * add workflow_dispatch to release workflow as manual fallback ([#30](https://github.com/rupeshbisen/play1-frontend/issues/30)) ([2af42ac](https://github.com/rupeshbisen/play1-frontend/commit/2af42ac8b378b71a57c0153878b59b173138370a))
+
+
+# [0.1.0](https://github.com/rupeshbisen/play1-frontend/compare/v0.0.0...v0.1.0) (2026-03-14)
 
 
 ### Features
@@ -61,5 +64,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ESLint configuration
 - Basic application structure with app router
 
-[Unreleased]: https://github.com/rupeshbisen/play1-frontend/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/rupeshbisen/play1-frontend/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/rupeshbisen/play1-frontend/releases/tag/v0.1.1
 [0.1.0]: https://github.com/rupeshbisen/play1-frontend/releases/tag/v0.1.0
