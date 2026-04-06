@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { useRef, useState } from 'react';
+import BrandLogo from '@/src/components/BrandLogo';
 
 const backdropStyle = {
   background:
-    'radial-gradient(1200px at 20% 15%, rgba(56, 189, 248, 0.16), transparent 50%), radial-gradient(900px at 80% 0%, rgba(251, 191, 36, 0.12), transparent 45%), linear-gradient(120deg, rgba(15, 23, 42, 0.9), rgba(8, 47, 73, 0.75))',
+    'radial-gradient(1200px at 20% 15%, rgba(var(--electric-blue-rgb), 0.16), transparent 50%), radial-gradient(900px at 80% 0%, rgba(var(--bright-orange-rgb), 0.12), transparent 45%), linear-gradient(120deg, rgba(var(--deep-indigo-rgb), 0.45), rgba(var(--vibrant-purple-rgb), 0.35))',
 };
 
 export default function ForgotPasswordClient() {
@@ -67,23 +68,24 @@ export default function ForgotPasswordClient() {
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
       <div className="absolute inset-0 -z-10" aria-hidden="true">
         <div className="absolute inset-0 opacity-80" style={backdropStyle} />
-        <div className="absolute left-16 top-16 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
-        <div className="absolute right-12 bottom-6 h-80 w-80 rounded-full bg-amber-300/10 blur-3xl" />
+        <div className="absolute left-16 top-16 h-72 w-72 rounded-full bg-electric-blue/10 blur-3xl" />
+        <div className="absolute right-12 bottom-6 h-80 w-80 rounded-full bg-bright-orange/10 blur-3xl" />
         <div className="absolute inset-x-8 inset-y-12 rounded-3xl border border-white/5 bg-white/5 blur-[120px]" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 lg:flex-row lg:items-center lg:gap-16 lg:py-20">
         <section className="flex-1 space-y-7">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-50/70 ring-1 ring-white/10">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-electric-blue/80 ring-1 ring-white/10">
             <span>Password reset</span>
             <span
-              className="h-1 w-1 rounded-full bg-amber-300/80"
+              className="h-1 w-1 rounded-full bg-bright-orange/80"
               aria-hidden="true"
             />
             <span>Secure recovery</span>
           </div>
 
           <div className="space-y-3">
+            <BrandLogo imageClassName="h-11 w-11" textClassName="text-2xl" />
             <h1 className="text-4xl font-semibold leading-[1.05] text-white sm:text-5xl">
               {step === 'email'
                 ? 'Reset your password'
@@ -103,7 +105,7 @@ export default function ForgotPasswordClient() {
           <div className="grid gap-4 text-sm text-slate-100/80 sm:grid-cols-2">
             <div className="rounded-xl border border-white/10 bg-white/5 p-4 shadow-sm">
               <div
-                className="mb-2 h-2 w-12 rounded-full bg-cyan-300/70"
+                className="mb-2 h-2 w-12 rounded-full bg-electric-blue/70"
                 aria-hidden="true"
               />
               <h3 className="text-base font-semibold text-white">
@@ -117,7 +119,7 @@ export default function ForgotPasswordClient() {
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4 shadow-sm">
               <div
-                className="mb-2 h-2 w-12 rounded-full bg-amber-300/70"
+                className="mb-2 h-2 w-12 rounded-full bg-bright-orange/70"
                 aria-hidden="true"
               />
               <h3 className="text-base font-semibold text-white">
@@ -134,7 +136,7 @@ export default function ForgotPasswordClient() {
 
         <section className="relative w-full max-w-lg">
           <div
-            className="absolute -inset-x-4 -top-8 h-24 rounded-3xl bg-cyan-400/20 blur-3xl"
+            className="absolute -inset-x-4 -top-8 h-24 rounded-3xl bg-electric-blue/20 blur-3xl"
             aria-hidden="true"
           />
           <form
@@ -145,7 +147,7 @@ export default function ForgotPasswordClient() {
                   ? handleVerifyOtp
                   : handleResetPassword
             }
-            className="relative flex w-full flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/70 p-8 shadow-2xl shadow-cyan-900/30 backdrop-blur"
+            className="relative flex w-full flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/70 p-8 shadow-2xl shadow-deep-indigo/35 backdrop-blur"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -166,7 +168,7 @@ export default function ForgotPasswordClient() {
               </div>
               <Link
                 href="/"
-                className="text-sm font-medium text-cyan-200 transition hover:text-cyan-100"
+                className="text-sm font-medium text-electric-blue transition hover:text-electric-blue/85"
               >
                 Back to site
               </Link>
@@ -187,14 +189,14 @@ export default function ForgotPasswordClient() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-electric-blue/60 focus:bg-white/10"
                   />
                 </label>
 
                 <button
                   type="submit"
                   disabled={!email}
-                  className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-cyan-400 to-amber-300 px-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-900/30 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+                  className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange px-4 text-base font-semibold text-slate-950 shadow-lg shadow-deep-indigo/35 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-electric-blue"
                   title="Backend integration pending"
                 >
                   Send OTP
@@ -226,7 +228,7 @@ export default function ForgotPasswordClient() {
                           onKeyDown={(e) => handleOtpKeyDown(index, e)}
                           aria-label={`OTP digit ${index + 1} of 6`}
                           autoComplete={index === 0 ? 'one-time-code' : 'off'}
-                          className="w-full h-14 text-center text-2xl font-semibold rounded-xl border border-white/10 bg-white/5 text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+                          className="w-full h-14 text-center text-2xl font-semibold rounded-xl border border-white/10 bg-white/5 text-white outline-none ring-0 transition focus:border-electric-blue/60 focus:bg-white/10"
                           required
                         />
                       ))}
@@ -237,7 +239,7 @@ export default function ForgotPasswordClient() {
                 <button
                   type="button"
                   onClick={handleBackToEmail}
-                  className="text-sm text-cyan-200 hover:text-cyan-100 transition"
+                  className="text-sm text-electric-blue hover:text-electric-blue/85 transition"
                 >
                   Change email address
                 </button>
@@ -245,7 +247,7 @@ export default function ForgotPasswordClient() {
                 <button
                   type="submit"
                   disabled={otp.some((digit) => digit.trim() === '')}
-                  className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-cyan-400 to-amber-300 px-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-900/30 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+                  className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange px-4 text-base font-semibold text-slate-950 shadow-lg shadow-deep-indigo/35 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-electric-blue"
                   title="Backend integration pending"
                 >
                   Verify OTP
@@ -253,7 +255,7 @@ export default function ForgotPasswordClient() {
 
                 <button
                   type="button"
-                  className="text-sm text-slate-200/80 hover:text-cyan-200 transition"
+                  className="text-sm text-slate-200/80 hover:text-electric-blue transition"
                   disabled
                   title="Backend integration pending"
                 >
@@ -277,7 +279,7 @@ export default function ForgotPasswordClient() {
                     onChange={(e) => setNewPassword(e.target.value)}
                     required
                     placeholder="********"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-electric-blue/60 focus:bg-white/10"
                   />
                 </label>
 
@@ -294,7 +296,7 @@ export default function ForgotPasswordClient() {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
                     placeholder="********"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-cyan-300/60 focus:bg-white/10"
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none ring-0 transition focus:border-electric-blue/60 focus:bg-white/10"
                   />
                 </label>
 
@@ -306,7 +308,7 @@ export default function ForgotPasswordClient() {
                     newPassword !== confirmPassword ||
                     newPassword.length < 8
                   }
-                  className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-cyan-400 to-amber-300 px-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-900/30 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
+                  className="inline-flex h-12 items-center justify-center rounded-xl bg-linear-to-r from-electric-blue via-deep-indigo to-bright-orange px-4 text-base font-semibold text-slate-950 shadow-lg shadow-deep-indigo/35 transition disabled:opacity-50 disabled:cursor-not-allowed hover:brightness-110 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-electric-blue"
                   title="Backend integration pending"
                 >
                   Reset Password
@@ -319,7 +321,7 @@ export default function ForgotPasswordClient() {
               <span className="mx-1">|</span>
               <Link
                 href="/login"
-                className="font-semibold text-cyan-200 transition hover:text-cyan-100"
+                className="font-semibold text-electric-blue transition hover:text-electric-blue/85"
               >
                 Sign in
               </Link>
