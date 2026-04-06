@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -34,6 +38,23 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Create baseline tag if none exist
+        run: |
+          TAG_GLOB='refs/tags/v[0-9]*.[0-9]*.[0-9]*'
+          if ! git ls-remote --tags origin "$TAG_GLOB" | grep -qE '^refs/tags/v[0-9]+\.[0-9]+\.[0-9]+$'; then
+            ROOT_COMMIT=$(git rev-list --max-parents=0 HEAD | tail -n 1)
+            git tag v0.0.0 "$ROOT_COMMIT"
+            git remote set-url origin "https://x-access-token:${{ secrets.RELEASE_TOKEN }}@github.com/${{ github.repository }}.git"
+            push_output=$(git push origin v0.0.0 2>&1) || {
+              if echo "$push_output" | grep -q 'already exists'; then
+                echo "Tag v0.0.0 already exists on remote, skipping."
+              else
+                echo "$push_output" >&2
+                exit 1
+              fi
+            }
+          fi
 
       - name: Release
         env:
