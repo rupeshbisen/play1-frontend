@@ -34,3 +34,5 @@ pnpm-lock.yaml
 # Other
 *.md
 *.json
+
+CHANGELOG.md
