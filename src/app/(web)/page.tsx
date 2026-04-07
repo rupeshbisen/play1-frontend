@@ -121,7 +121,7 @@ export default function Home() {
     description: siteConfig.description,
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${siteConfig.url}/tournaments`,
+      target: `${siteConfig.url}/tournaments?query={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

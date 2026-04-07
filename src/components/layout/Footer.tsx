@@ -82,7 +82,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
-                aria-label="Follow Play1 on Facebook"
+                aria-label="Follow Play1 on GitHub"
               >
                 <svg
                   className="h-4 w-4"
@@ -98,7 +98,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
-                aria-label="Follow Play1 on Twitter"
+                aria-label="Join Play1 Community Discussions"
               >
                 <svg
                   className="h-4 w-4"
@@ -116,7 +116,9 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="/"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
                 aria-label="Follow Play1 on Instagram"
               >

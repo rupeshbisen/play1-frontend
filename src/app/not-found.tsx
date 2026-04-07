@@ -116,7 +116,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="https://github.com/rupeshbisen/play1-frontend/discussions"
+              href="https://discord.gg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition-all hover:border-deep-indigo hover:bg-deep-indigo/10 hover:text-deep-indigo"

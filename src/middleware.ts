@@ -24,7 +24,10 @@ export function middleware(request: NextRequest) {
 
     if (!isAuthenticated) {
       const loginUrl = new URL(LOGIN_PATH, request.url);
-      loginUrl.searchParams.set('callbackUrl', pathname);
+      loginUrl.searchParams.set(
+        'callbackUrl',
+        pathname + request.nextUrl.search
+      );
       return NextResponse.redirect(loginUrl);
     }
   }
