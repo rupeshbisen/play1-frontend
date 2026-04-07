@@ -1,3 +1,21 @@
+# [0.1.0-dev.1](https://github.com/rupeshbisen/play1-frontend/compare/v0.0.1-dev.1...v0.1.0-dev.1) (2026-04-07)
+
+
+### Bug Fixes
+
+* add workflow_dispatch to release workflow as manual fallback ([#30](https://github.com/rupeshbisen/play1-frontend/issues/30)) ([2af42ac](https://github.com/rupeshbisen/play1-frontend/commit/2af42ac8b378b71a57c0153878b59b173138370a))
+* start release versioning from 0.x.x instead of 1.0.0 ([#47](https://github.com/rupeshbisen/play1-frontend/issues/47)) ([6ad9e8e](https://github.com/rupeshbisen/play1-frontend/commit/6ad9e8eb22788a8504f02cb2d7932e3e0afb134f))
+
+
+### Features
+
+* automatic changelog commits and release tags with protected main branch support ([#29](https://github.com/rupeshbisen/play1-frontend/issues/29)) ([ec9821c](https://github.com/rupeshbisen/play1-frontend/commit/ec9821c48962e9715453e4ea446a9369dce844b7))
+
+
+### Reverts
+
+* Revert "fix: start release versioning from 0.x.x instead of 1.0.0 ([#47](https://github.com/rupeshbisen/play1-frontend/issues/47))" ([#48](https://github.com/rupeshbisen/play1-frontend/issues/48)) ([27d8c70](https://github.com/rupeshbisen/play1-frontend/commit/27d8c700ff0d0297cbbfe303d770657fc1ba6a72))
+
 # 1.0.0-dev.1 (2026-04-07)
 
 
