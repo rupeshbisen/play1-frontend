@@ -116,7 +116,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://instagram.com/play1sports"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-colors hover:text-vibrant-purple"
