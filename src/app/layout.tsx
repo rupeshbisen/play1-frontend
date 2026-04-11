@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Footer from '@/src/components/Footer';
+import QueryProvider from '../providers/QueryProvider';
+import { defaultMetadata } from '@/src/lib/seo';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -13,11 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Play1 - Real-Time Sports Platform',
-  description:
-    'Open-source real-time sports platform for live match scoring, live video streaming, and player auctions. From grassroots tournaments to professional leagues.',
-};
+export const metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
@@ -29,8 +25,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <main className="grow">{children}</main>
-        <Footer />
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
