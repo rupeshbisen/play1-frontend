@@ -1,3 +1,11 @@
+# [0.1.0-dev.2](https://github.com/rupeshbisen/play1-frontend/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-04-11)
+
+
+### Bug Fixes
+
+* address PR review comments (shebangs, node version, aria-labels, links)" ([bfc0cd0](https://github.com/rupeshbisen/play1-frontend/commit/bfc0cd017818180956ca8443cdf035f3dc2c2f7e))
+* use proper placeholder URLs for Discord and Instagram links ([73901f0](https://github.com/rupeshbisen/play1-frontend/commit/73901f0eb6e5dcc536e7ab0a54ed729b07b115be))
+
 # [0.1.0-dev.1](https://github.com/rupeshbisen/play1-frontend/compare/v0.0.1-dev.1...v0.1.0-dev.1) (2026-04-07)
 
 
